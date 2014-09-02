@@ -17,12 +17,14 @@ ActiveRecord::Schema.define(version: 20140902141425) do
   enable_extension "plpgsql"
 
   create_table "characters", force: true do |t|
-    t.string "name",       default: "", null: false
-    t.string "gender",     default: "", null: false
-    t.string "age",        default: "", null: false
-    t.string "race",       default: "", null: false
-    t.string "ethercraft", default: "", null: false
-    t.string "birthplace", default: "", null: false
+    t.string   "name",       default: "", null: false
+    t.string   "gender",     default: "", null: false
+    t.string   "age",        default: "", null: false
+    t.string   "race",       default: "", null: false
+    t.string   "ethercraft", default: "", null: false
+    t.string   "birthplace", default: "", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
 end

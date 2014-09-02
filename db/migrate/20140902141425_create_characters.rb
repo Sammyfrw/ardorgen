@@ -7,6 +7,8 @@ class CreateCharacters < ActiveRecord::Migration
       t.string :race, null: false, default: ""
       t.string :ethercraft, null: false, default: ""
       t.string :birthplace, null: false, default: ""
+
+      t.timestamps null: false
     end
   end
 end

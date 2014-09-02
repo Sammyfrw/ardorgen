@@ -1,8 +1,10 @@
 class CharactersController < ApplicationController
   def index
+    @characters = Character.order(created_at: :desc)
   end
 
   def show
+    @character = Character.find(params[:id])
   end
 
   def new
@@ -10,6 +12,12 @@ class CharactersController < ApplicationController
   end
 
   def create
+    @character = Character.create(character_params)
+    if @character.save
+      redirect_to root
+    else
+      render :new
+    end
   end
 
   def edit
@@ -19,5 +27,18 @@ class CharactersController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def character_params
+    params.require(:character).permit(
+      :name,
+      :age,
+      :gender,
+      :race,
+      :ethercraft,
+      :birthplace
+    )
   end
 end

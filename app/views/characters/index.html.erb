@@ -1,2 +1,8 @@
-<h4>Characters</h4>
+<h2>Characters</h2>
 <%= link_to "Create a New Character", [:new, :character] %>
+
+<h3>Created Characters</h3>
+<ul>
+  <%= render @characters %>
+</ul>
+
