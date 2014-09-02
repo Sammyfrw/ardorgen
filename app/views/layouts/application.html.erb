@@ -7,8 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<div class="header">
+  <div class="site_title">
+    <%= link_to "Ardorgen", root_path %>
+  </div>
+</div>
+<div class="yield">
+  <%= yield %>
+</div>
 
 </body>
 </html>

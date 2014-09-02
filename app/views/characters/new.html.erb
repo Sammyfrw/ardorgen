@@ -1,10 +1,34 @@
 <h4>New Character</h4>
 <ul>
-  <li>Name:</li>
-  <li>Race:</li>
-  <li>Gender:</li>
-  <li>Age:</li>
-  <li>Ethercraft:</li>
-  <li>Blood Type:</li>
-<li>Place of Birth:</li>
+  <div class="form">
+    <%= form_for @character do |form| %>
+    <div class="form_field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+    <div class="form_field">
+      <%= form.label :race %>
+      <%= form.text_field :race %>
+    </div>
+    <div class="form_field">
+      <%= form.label :gender %>
+      <%= form.text_field :gender %>
+    </div>
+    <div class="form_field">
+      <%= form.label :age %>
+      <%= form.text_field :age %>
+    </div>
+    <div class="form_field">
+      <%= form.label :ethercraft %>
+      <%= form.text_field :ethercraft %>
+    </div>
+    <div class="form_field">
+      <%= form.label :birthplace, "Place of Birth" %>
+      <%= form.text_field :birthplace %>
+    </div>
+
+    <%= form.submit "Submit Character" %>
+    <% end %>
+  </div>
+
 </ul>
