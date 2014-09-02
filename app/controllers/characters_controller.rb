@@ -14,7 +14,7 @@ class CharactersController < ApplicationController
   def create
     @character = Character.create(character_params)
     if @character.save
-      redirect_to root
+      redirect_to root_path
     else
       render :new
     end
