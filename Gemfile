@@ -13,7 +13,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'rails_12factor', group: :production
 gem 'bourbon'
 gem 'neat', '~> 1.5.0'
-
+gem 'fog', '~> 1.3.1'
+gem 'dotenv-rails'
+gem 'aws-sdk'
+gem 'carrierwave'
+gem 'rmagick', '2.13.2', require: 'RMagick'
 
 # gem 'bcrypt', '~> 3.1.7'
 

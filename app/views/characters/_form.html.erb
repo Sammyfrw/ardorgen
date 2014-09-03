@@ -3,6 +3,10 @@
   <%= form.text_field :name %>
 </div>
 <div class="form_field">
+  <%= form.label :image, "Image (200x200)" %>
+  <%= form.file_field :image %>
+</div>
+<div class="form_field">
   <%= form.label :race %>
   <%= form.collection_select :race, Character::RACES, :to_s, :to_s, include_blank: true %>
 </div>

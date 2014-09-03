@@ -9,4 +9,6 @@ class Character < ActiveRecord::Base
   validates :age, presence: true
   validates :ethercraft, presence: true
   validates :birthplace, presence: true
+
+  mount_uploader :image, ImageUploader
 end
