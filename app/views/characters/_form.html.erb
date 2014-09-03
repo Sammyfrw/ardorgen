@@ -1,0 +1,25 @@
+<div class="form_field">
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</div>
+<div class="form_field">
+  <%= form.label :race %>
+  <%= form.collection_select :race, Character::RACES, :to_s, :to_s, include_blank: true %>
+</div>
+<div class="form_field">
+  <%= form.label :gender %>
+  <%= form.collection_select :gender, Character::GENDER, :to_s, :to_s, include_blank: true %>
+</div>
+<div class="form_field">
+  <%= form.label :age %>
+  <%= form.text_field :age %>
+</div>
+<div class="form_field">
+  <%= form.label :ethercraft %>
+  <%= form.collection_select :ethercraft, Character::ETHERCRAFT, :to_s, :to_s, include_blank: true %>
+</div>
+<div class="form_field">
+  <%= form.label :birthplace, "Place of Birth" %>
+  <%= form.text_field :birthplace %>
+</div>
+<%= form.submit "Submit Character" %>
