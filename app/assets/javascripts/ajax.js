@@ -15,6 +15,16 @@ $(function () {
         }
     });
 
+    var ethercrafts = window.ETHERCRAFT
+
+    var countries = [{
+            name: 'Rogalia',
+            data: [2, 5, 8, 4, 3]
+        },  {
+            name: 'Zahnheim',
+            data: [2, 9, 5, 5, 8]
+        }]
+
     var stats_chart_options = {
         chart: {
             renderTo: 'container',
@@ -24,20 +34,14 @@ $(function () {
             text: 'Ethercraft Population by Country'
         },
         xAxis: {
-            categories: ['Soulreaving', 'Enforcing', 'Invoking', 'Evoking']
+            categories: ethercrafts
         },
         yAxis: {
             title: {
                 text: 'Popuation (thousand)'
             }
         },
-        series: [{
-            name: 'Rogalia',
-            data: [2, 5, 8, 4]
-        },  {
-            name: 'Zahnheim',
-            data: [2, 9, 5, 5]
-        }]
+        series: countries
     };
 
     var stats_chart = new Highcharts.Chart(stats_chart_options);

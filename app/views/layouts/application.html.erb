@@ -6,6 +6,10 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 
+  <script>
+    window.ETHERCRAFT = <%= raw @ethercrafts.to_json %>
+  </script>
+
 </head>
 <body>
 <div class="header">
@@ -14,6 +18,7 @@
     <%= link_to "Ethercrafts", ethercrafts_path %>
   </div>
 </div>
+
 <div class="yield">
   <%= yield %>
 </div>
