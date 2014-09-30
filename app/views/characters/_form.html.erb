@@ -20,7 +20,7 @@
 </div>
 <div class="form_field">
   <%= form.label :ethercraft %>
-  <%= form.collection_select :ethercraft, Character::ETHERCRAFT, :to_s, :to_s, include_blank: true %>
+  <%= form.collection_select :ethercraft, Ethercraft.all, :name, :name, include_blank: true %>
 </div>
 <div class="form_field">
   <%= form.label :birthplace, "Place of Birth" %>
