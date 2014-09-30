@@ -1,6 +1,7 @@
 class CharactersController < ApplicationController
   def index
     @characters = Character.order(created_at: :asc)
+    @ethercrafts = get_ethercrafts
   end
 
   def show
@@ -45,5 +46,14 @@ class CharactersController < ApplicationController
       :birthplace,
       :image
     )
+  end
+
+  def get_ethercrafts
+    crafts = Ethercraft.all
+    craft_names = []
+    crafts.map do |craft|
+      craft_names << craft.name
+    end
+    craft_names
   end
 end
