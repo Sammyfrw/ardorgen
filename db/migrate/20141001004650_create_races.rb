@@ -5,7 +5,7 @@ class CreateRaces < ActiveRecord::Migration
       t.text :description, null: false, default: ""
       t.string :evolution, null: false, default: ""
 
-      t.timestamps null:false
+      t.timestamps null: false
     end
   end
 end

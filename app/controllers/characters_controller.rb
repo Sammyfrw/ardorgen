@@ -2,6 +2,7 @@ class CharactersController < ApplicationController
   def index
     @characters = Character.order(created_at: :asc)
     @ethercrafts = Ethercraft.pluck(:name)
+    @races = generate_race_series
   end
 
   def show
@@ -10,6 +11,8 @@ class CharactersController < ApplicationController
 
   def new
     @character = Character.new
+    @races = Race.all
+    @ethercrafts = Ethercraft.all
   end
 
   def create
@@ -23,6 +26,8 @@ class CharactersController < ApplicationController
 
   def edit
     @character = Character.find(params[:id])
+    @races = Race.all
+    @ethercrafts = Ethercraft.all
   end
 
   def update
@@ -41,10 +46,21 @@ class CharactersController < ApplicationController
       :name,
       :age,
       :gender,
-      :race,
-      :ethercraft,
+      :race_id,
+      :ethercraft_id,
       :birthplace,
       :image
     )
+  end
+
+  def generate_race_series
+    races = Race.all
+    ethercrafts = Ethercraft.all
+    races.map do |race|
+      race_ethercraft_array = ethercrafts.map do |ethercraft|
+        Character.where(race_id: race.id, ethercraft_id: ethercraft.id).count
+      end
+      { name: race.name, data: race_ethercraft_array }
+    end
   end
 end
