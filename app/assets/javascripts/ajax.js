@@ -17,13 +17,7 @@ $(function () {
 
     var ethercrafts = window.ETHERCRAFT
 
-    var countries = [{
-            name: 'Rogalia',
-            data: [2, 5, 8, 4, 3]
-        },  {
-            name: 'Zahnheim',
-            data: [2, 9, 5, 5, 8]
-        }]
+    var races = window.RACE
 
     var stats_chart_options = {
         chart: {
@@ -31,7 +25,7 @@ $(function () {
             type: 'bar'
         },
         title: {
-            text: 'Ethercraft Population by Country'
+            text: 'Ethercraft Population by Race'
         },
         xAxis: {
             categories: ethercrafts
@@ -41,7 +35,7 @@ $(function () {
                 text: 'Popuation (thousand)'
             }
         },
-        series: countries
+        series: races
     };
 
     var stats_chart = new Highcharts.Chart(stats_chart_options);

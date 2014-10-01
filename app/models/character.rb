@@ -1,5 +1,4 @@
 class Character < ActiveRecord::Base
-  RACES = %w(Sapien Loupain Aileseau Agamidan Lyncan Vesperan)
   GENDER = %w(Male Female Other)
 
   validates :name, presence: true, uniqueness: true

@@ -8,6 +8,7 @@
 
   <script>
     window.ETHERCRAFT = <%= raw @ethercrafts.to_json %>
+    window.RACE = <%= raw @races.to_json %>
   </script>
 
 </head>
@@ -16,6 +17,7 @@
   <div class="site_title">
     <%= link_to "Ardorgen", root_path %>
     <%= link_to "Ethercrafts", ethercrafts_path %>
+    <%= link_to "Races", races_path %>
   </div>
 </div>
 
