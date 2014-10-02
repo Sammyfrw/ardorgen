@@ -16,4 +16,5 @@ Current Progress
 
 Currently, the app still contains a very simple form to create characters
 with, using carrierwave to upload character images via S3 Amazon Web Services.
-More fields will be coming as Ardor is developed.
+Highcharts has also been implemented to practice displaying data on dynamic,
+database-linked diagrams to observe data.
