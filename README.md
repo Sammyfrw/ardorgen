@@ -1,5 +1,6 @@
 Ardor Character Generator
 =========================
+[![Code Climate](https://codeclimate.com/github/Sammyfrw/ardorgen/badges/gpa.svg)](https://codeclimate.com/github/Sammyfrw/ardorgen)
 
 What is this?
 -------------
