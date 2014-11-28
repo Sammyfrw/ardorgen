@@ -1,0 +1,29 @@
+<div class="form_field">
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</div>
+<div class="form_field">
+  <%= form.label :flag, "Flag (200x200)" %>
+  <%= form.file_field :flag %>
+</div>
+<div class="form_field">
+  <%= form.label :age %>
+  <%= form.text_field :age %>
+</div>
+<div class="form_field">
+  <%= form.label :year_established %>
+  <%= form.text_field :year_established %>
+</div>
+<div class="form_field">
+  <%= form.label :demonym %>
+  <%= form.text_field :demonym %>
+</div>
+<div class="form_field">
+  <%= form.label :language %>
+  <%= form.text_field :language %>
+</div>
+<div class="form_field">
+  <%= form.label :history %>
+  <%= form.text_area :history %>
+</div>
+<%= form.submit "Submit country" %>

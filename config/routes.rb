@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   root "characters#index"
 
-  resources :characters, only: [:index, :show, :new, :create, :edit, :update]
-  resources :ethercrafts, only: [:index, :new, :create, :edit, :update]
-    resources :races, only: [:index, :new, :create, :edit, :update]
+  resources :characters
+  resources :ethercrafts
+  resources :races
+  resources :countries
 end

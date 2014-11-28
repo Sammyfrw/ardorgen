@@ -20,6 +20,19 @@ gem 'carrierwave'
 gem 'rmagick', '2.13.2', require: 'RMagick'
 gem 'highcharts-rails', '~> 3.0.0'
 
+group :development, :test do
+  gem 'rspec-rails',  '~> 3.0.0'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+end
+
+
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development

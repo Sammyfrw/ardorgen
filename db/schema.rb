@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141001014029) do
+ActiveRecord::Schema.define(version: 20141126134753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 20141001014029) do
 
   add_index "characters", ["ethercraft_id"], name: "index_characters_on_ethercraft_id", using: :btree
   add_index "characters", ["race_id"], name: "index_characters_on_race_id", using: :btree
+
+  create_table "countries", force: true do |t|
+    t.string  "name",             default: "", null: false
+    t.integer "age",              default: 0,  null: false
+    t.integer "year_established", default: 0,  null: false
+    t.string  "demonym",          default: "", null: false
+    t.string  "language",         default: "", null: false
+    t.string  "flag",             default: "", null: false
+    t.text    "history",          default: "", null: false
+  end
 
   create_table "ethercrafts", force: true do |t|
     t.string   "name",        default: "", null: false

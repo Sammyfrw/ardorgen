@@ -1,0 +1,18 @@
+<div class="country_name">
+  <h3><strong><%= @country.name %></strong></h3>
+  (<%= link_to "Edit", [:edit, @country] %>)
+</div>
+
+<div class="country_image">
+  <%= image_tag @country.flag.thumb.url %>
+</div>
+
+<div class="country_details">
+  <ul><strong>
+    <li>Age: <%= @country.age %></li>
+    <li>Established: <%= @country.year_established %></li>
+    <li>Demonym: <%= @country.demonym %></li>
+    <li>Languages: <%= @country.language %></li>
+    <li>History: <%= @country.history %></li>
+  </strong></ul>
+</div>
