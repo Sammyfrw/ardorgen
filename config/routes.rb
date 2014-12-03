@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :ethercrafts
   resources :races
   resources :countries
+  resources :regions
 end

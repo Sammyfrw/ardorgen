@@ -14,8 +14,8 @@ class ChangeEthercraftAndRaceToForeignKeys < ActiveRecord::Migration
     remove_index :characters, :race_id
     remove_index :characters, :ethercraft_id
 
-    remove_column :characters, :race_id, :integer
-    remove_column :characters, :ethercraft_id, :integer
+    remove_column :characters, :race_id
+    remove_column :characters, :ethercraft_id
 
     add_column :characters, :race, :string, null: false, default: ""
     add_column :characters, :ethercraft, :string, null: false, default: ""

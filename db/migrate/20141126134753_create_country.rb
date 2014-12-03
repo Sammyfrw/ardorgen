@@ -8,6 +8,7 @@ class CreateCountry < ActiveRecord::Migration
       t.string :language, null: false, default: ""
       t.string :flag, null: false, default: ""
       t.text :history, null: false, default: ""
+      t.timestamps null:false
     end
   end
 end
