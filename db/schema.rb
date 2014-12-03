@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20141203012113) do
   create_table "regions", force: true do |t|
     t.string   "name",       default: "", null: false
     t.text     "history",    default: "", null: false
+    t.integer  "country_id", default: 0,  null: false
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
