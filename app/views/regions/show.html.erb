@@ -1,0 +1,11 @@
+<div class="region_name">
+  <h3><strong><%= @region.name %></strong></h3>
+  (<%= link_to "Edit", [:edit, @region] %>)
+</div>
+
+<div class="region_details">
+  <ul><strong>
+    <li>Country: <%= @region.country %></li>
+    <li>History: <%= @region.history %></li>
+  </strong></ul>
+</div>

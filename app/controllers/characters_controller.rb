@@ -48,7 +48,7 @@ class CharactersController < ApplicationController
       :gender,
       :race_id,
       :ethercraft_id,
-      :birthplace,
+      :birthplace_id,
       :image
     )
   end
