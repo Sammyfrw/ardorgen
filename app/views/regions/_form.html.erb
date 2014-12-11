@@ -3,8 +3,8 @@
   <%= form.text_field :name %>
 </div>
 <div class="form_field">
-  <%= form.label :region %>
-  <%= form.text_field :region %>
+  <%= form.label :country %>
+  <%= form.collection_select :country_id, @countries, :id, :name, include_blank: true %>
 <div class="form_field">
   <%= form.label :history %>
   <%= form.text_area :history %>

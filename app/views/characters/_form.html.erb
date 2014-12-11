@@ -24,6 +24,6 @@
 </div>
 <div class="form_field">
   <%= form.label :birthplace, "Place of Birth" %>
-  <%= form.text_field :birthplace %>
+  <%= form.collection_select :birthplace_id, @birthplaces, :id, :name, include_blank: true %>
 </div>
 <%= form.submit "Submit Character" %>

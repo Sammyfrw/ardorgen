@@ -13,6 +13,7 @@ class CharactersController < ApplicationController
     @character = Character.new
     @races = Race.all
     @ethercrafts = Ethercraft.all
+    @birthplaces = Country.all
   end
 
   def create
@@ -28,6 +29,7 @@ class CharactersController < ApplicationController
     @character = Character.find(params[:id])
     @races = Race.all
     @ethercrafts = Ethercraft.all
+    @birthplaces = Country.all
   end
 
   def update

@@ -9,6 +9,7 @@ class RegionsController < ApplicationController
 
   def new
     @region = Region.new
+    @countries = Country.all
   end
 
   def create
@@ -22,6 +23,7 @@ class RegionsController < ApplicationController
 
   def edit
     @region = Region.find(params[:id])
+    @countries = Country.all
   end
 
   def update

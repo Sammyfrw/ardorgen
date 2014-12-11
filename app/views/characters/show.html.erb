@@ -9,10 +9,10 @@
 
 <div class="character_details">
   <ul><strong>
-    <li>Race: <%= @character.race.name %></li>
+    <li>Race: <%= link_to @character.race.name, @character.race %></li>
     <li>Gender: <%= @character.gender %></li>
     <li>Age: <%= @character.age %></li>
-    <li>Ethercraft: <%= @character.ethercraft.name %></li>
-    <li>Place of Birth: <%= @character.birthplace %></li>
+    <li>Ethercraft: <%= link_to @character.ethercraft.name, @character.ethercraft %></li>
+    <li>Place of Birth: <%= link_to @character.birthplace.name, @character.birthplace %></li>
   </strong></ul>
 </div>
