@@ -22,8 +22,19 @@
   <%= form.label :ethercraft %>
   <%= form.collection_select :ethercraft_id, @ethercrafts, :id, :name, include_blank: true %>
 </div>
+
+<div class="birthplace_form_field">
+  <%= form.select :birthplace_id, options_for_select(@birthplaces.collect { |country|
+    [country.name.titleize, country.id] }, 1), {}, { id: 'countries_select' } %>
+  <%= form.select :birth_region, options_for_select(@birth_regions.collect { |region|
+    [region.name.titleize, region.id] }, 0), {}, { id: 'regions_select' } %>
+</div>
+
 <div class="form_field">
   <%= form.label :birthplace, "Place of Birth" %>
   <%= form.collection_select :birthplace_id, @birthplaces, :id, :name, include_blank: true %>
 </div>
+<div class="form_field">
+  <%= form.label :birth_region, "Region" %>
+  <%= form.collection_select :birth_region_id, @birthplaces, :id, :regions, include_blank: true %>
 <%= form.submit "Submit Character" %>

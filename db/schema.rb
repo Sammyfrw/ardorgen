@@ -11,21 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141203012113) do
+ActiveRecord::Schema.define(version: 20141212003754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "characters", force: true do |t|
-    t.string   "name",          default: "", null: false
-    t.string   "gender",        default: "", null: false
-    t.string   "age",           default: "", null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.string   "image",         default: "", null: false
-    t.integer  "race_id",       default: 0,  null: false
-    t.integer  "ethercraft_id", default: 0,  null: false
-    t.integer  "birthplace_id", default: 0,  null: false
+    t.string   "name",            default: "", null: false
+    t.string   "gender",          default: "", null: false
+    t.string   "age",             default: "", null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.string   "image",           default: "", null: false
+    t.integer  "race_id",         default: 0,  null: false
+    t.integer  "ethercraft_id",   default: 0,  null: false
+    t.integer  "birthplace_id",   default: 0,  null: false
+    t.integer  "birth_region_id", default: 0,  null: false
   end
 
   add_index "characters", ["birthplace_id"], name: "index_characters_on_birthplace_id", using: :btree

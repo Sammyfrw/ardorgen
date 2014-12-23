@@ -14,6 +14,7 @@ class CharactersController < ApplicationController
     @races = Race.all
     @ethercrafts = Ethercraft.all
     @birthplaces = Country.all
+    @birth_regions = Region.all
   end
 
   def create
@@ -30,6 +31,7 @@ class CharactersController < ApplicationController
     @races = Race.all
     @ethercrafts = Ethercraft.all
     @birthplaces = Country.all
+    @birth_regions = Region.all
   end
 
   def update
@@ -51,6 +53,7 @@ class CharactersController < ApplicationController
       :race_id,
       :ethercraft_id,
       :birthplace_id,
+      :birth_region_id,
       :image
     )
   end
