@@ -14,7 +14,7 @@ class CharactersController < ApplicationController
     @races = Race.all
     @ethercrafts = Ethercraft.all
     @birthplaces = Country.all
-    @birth_regions = Region.all
+    @birth_regions = Region.where("country_id = ?", Country.first.id)
   end
 
   def create
@@ -40,6 +40,13 @@ class CharactersController < ApplicationController
       redirect_to character
     else
       render :edit
+    end
+  end
+
+  def update_character_form
+    @birth_regions = Region.find("country_id = ?", params[:birthplace_id])
+    respond_to do |format|
+      format.js
     end
   end
 
