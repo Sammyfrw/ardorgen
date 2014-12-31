@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root "characters#index"
+
   get "characters/update_character_form", as: "update_character_form"
 
   resources :characters

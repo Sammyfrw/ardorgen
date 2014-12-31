@@ -44,7 +44,7 @@ class CharactersController < ApplicationController
   end
 
   def update_character_form
-    @birth_regions = Region.find("country_id = ?", params[:birthplace_id])
+    @birth_regions = Region.where("country_id = ?", params[:birthplace_id])
     respond_to do |format|
       format.js
     end
