@@ -31,7 +31,7 @@ class CharactersController < ApplicationController
     @races = Race.all
     @ethercrafts = Ethercraft.all
     @birthplaces = Country.all
-    @birth_regions = Region.all
+    @birth_regions = Region.where("country_id = ?", @character.birthplace.id)
   end
 
   def update

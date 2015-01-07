@@ -25,10 +25,11 @@
 
 <div class="birthplace_form_field">
   <%= form.label :birthplace %>
-  <%= form.select :birthplace_id, options_for_select(@birthplaces.collect { |country|
-    [country.name.titleize, country.id] }, 1), {}, { id: 'countries_select' } %>
+  <%= form.collection_select :birthplace_id, @birthplaces, :id, :name, {include_blank: true}, {id: 'countries_select'} %>
 
   <%= form.label :birth_region %>
-  <%= form.select :birth_region, options_for_select(@birth_regions.collect { |region|
-    [region.name.titleize, region.id] }, 0), {}, { id: 'regions_select' } %>
+  <%= form.collection_select :birth_region_id, @birth_regions, :id, :name, {include_blank: true}, {id: 'regions_select'} %>
+
 </div>
+
+<%= form.submit "Submit" %>
