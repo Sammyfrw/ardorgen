@@ -1,9 +1,9 @@
 class Character < ActiveRecord::Base
   GENDER = %w(Male Female Other)
-  has_one :race
-  has_one :ethercraft
-  has_one :birthplace, class_name: "Country"
-  has_one :birth_region, class_name: "Region"
+  belongs_to :race
+  belongs_to :ethercraft
+  belongs_to :birthplace, class_name: "Country"
+  belongs_to :birth_region, class_name: "Region"
 
   validates :name, presence: true, uniqueness: true
   validates :race, presence: true

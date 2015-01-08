@@ -13,6 +13,7 @@
     <li>Gender: <%= @character.gender %></li>
     <li>Age: <%= @character.age %></li>
     <li>Ethercraft: <%= link_to @character.ethercraft.name, @character.ethercraft %></li>
-    <li>Place of Birth: <%= link_to @character.birthplace.name, @character.birthplace %></li>
+    <li>Place of Birth: <%= link_to @character.birth_region.name, @character.birth_region%>,
+      <%= link_to @character.birthplace.name, @character.birthplace %></li>
   </strong></ul>
 </div>
