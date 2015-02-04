@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "characters#index"
+  root "dashboards#new"
 
   get "characters/update_character_form", as: "update_character_form"
 
