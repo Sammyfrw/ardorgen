@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :races
   resources :countries
   resources :regions
+  resources :places
+
 end
