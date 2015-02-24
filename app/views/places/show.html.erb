@@ -1,0 +1,11 @@
+<div class="place_name">
+  <h3><strong><%= @place.name %></strong></h3>
+  (<%= link_to "Edit", [:edit, @place] %>)
+</div>
+
+<div class="place_details">
+  <ul><strong>
+    <li>Country: <%= @place.country.name %></li>
+    <li>History: <%= @place.history %></li>
+  </strong></ul>
+</div>

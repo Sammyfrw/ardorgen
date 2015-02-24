@@ -1,0 +1,3 @@
+<li>
+  <%= link_to place.name, place %>, <%= link_to place.country.name, place.country %> (<%= link_to "Edit", [ :edit, place] %>) (<%= link_to "Delete", place, method: :delete %>)
+</li>
