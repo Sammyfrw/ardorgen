@@ -1,6 +1,6 @@
 <li>
   <div class="ethercraft_name">
-    <%= ethercraft.name %> (<%= link_to "Edit", [ :edit, ethercraft] %>)
+    <%= ethercraft.name %> (<%= link_to "Edit", [ :edit, ethercraft] %>) (<%= link_to "Delete", ethercraft, method: :delete %>)
   </div>
   <div class="ethercraft_desc">
     <%= ethercraft.description %>

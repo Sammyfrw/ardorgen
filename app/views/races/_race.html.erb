@@ -1,6 +1,6 @@
 <li>
   <div class="race_name">
-    <%= race.name %> [<%= race.evolution%>] (<%= link_to "Edit", [ :edit, race] %>)
+    <%= race.name %> [<%= race.evolution%>] (<%= link_to "Edit", [ :edit, race] %>) (<%= link_to "Delete", race, method: :delete %>)
   </div>
   <div class="race_desc">
     <%= race.description %>

@@ -43,6 +43,12 @@ class CharactersController < ApplicationController
     end
   end
 
+  def destroy
+    character = Character.find(params[:id])
+    character.destroy
+    redirect_to characters_path
+  end
+
   def update_character_form
     @birth_regions = Region.where("country_id = ?", params[:birthplace_id])
     respond_to do |format|

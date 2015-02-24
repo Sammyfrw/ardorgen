@@ -29,6 +29,12 @@ class EthercraftsController < ApplicationController
     end
   end
 
+  def destroy
+    ethercraft = Ethercraft.find(params[:id])
+    ethercraft.destroy
+    redirect_to ethercrafts_path
+  end
+
   private
 
   def ethercraft_params
