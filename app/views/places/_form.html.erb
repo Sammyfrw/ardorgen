@@ -5,6 +5,11 @@
 <div class="form_field">
   <%= form.label :country %>
   <%= form.collection_select :country_id, @countries, :id, :name, include_blank: true %>
+</div>
+<div class="form_field">
+  <%= form.label :region %>
+  <%= form.collection_select :region_id, @regions, :id, :name, include_blank: true %>
+</div>
 <div class="form_field">
   <%= form.label :history %>
   <%= form.text_area :history %>
