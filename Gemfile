@@ -22,6 +22,7 @@ gem 'highcharts-rails', '~> 3.0.0'
 
 group :development, :test do
   gem 'rspec-rails',  '~> 3.0.0'
+  gem 'rspec-collection_matchers'
   gem 'factory_girl_rails'
 end
 

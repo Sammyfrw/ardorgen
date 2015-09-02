@@ -58,9 +58,9 @@ development:
 test:
  adapter: postgresql
  encoding: utf8
- database: ardorgen
+ database: ardorgen_test
  pool: 5
- username: root # or your system username
+ username: postgres # or your system username
  password:
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -85,5 +85,5 @@ test:
 production:
   <<: *default
   database: ardorgen_production
-  username: ardorgen
+  username: postgres
   password: <%= ENV['ARDORGEN_DATABASE_PASSWORD'] %>
