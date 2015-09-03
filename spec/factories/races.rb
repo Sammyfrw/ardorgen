@@ -1,10 +1,6 @@
 require 'faker'
 
 FactoryGirl.define do
-  # factory :race do
-  #   sequence(:name) { |n| "Race {n}"}
-  #   description "Cool cats."
-
   factory :race do
     name {Faker::Address.city}
     description {Faker::Lorem.paragraph(1, false)}
@@ -17,6 +13,11 @@ FactoryGirl.define do
     factory :bio_race do
       evolution "Biological"
     end
+
+    factory :invalid_race do
+      name nil
+    end
+
   end
 end
 

@@ -19,6 +19,7 @@ gem 'aws-sdk'
 gem 'carrierwave'
 gem 'rmagick', '2.13.2', require: 'RMagick'
 gem 'highcharts-rails', '~> 3.0.0'
+gem 'pry-rails'
 
 group :development, :test do
   gem 'rspec-rails',  '~> 3.0.0'
