@@ -32,6 +32,7 @@ GEM
     aws-sdk (1.51.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
+    bcrypt (3.1.9-x86-mingw32)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -206,6 +207,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk
+  bcrypt (~> 3.1.7)
   bourbon
   capybara
   carrierwave
