@@ -23,6 +23,17 @@
     <%= link_to "Regions", regions_path %> |
     <%= link_to "Places", places_path %> |
   </div>
+
+  <div class="user_header">
+    <% if @current_user %>
+      <%= link_to "Sign Out", sign_out_path, method: "delete" %> |
+      <%= "Signed in as " + current_user.name %> |
+    <% else %>
+      <%= link_to "Sign In", sign_in_path %> |
+      <%= link_to "Sign Up", sign_up_path %> |
+    <% end %>
+  </div>
+
 </div>
 
 <div class="yield">
