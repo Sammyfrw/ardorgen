@@ -13,4 +13,12 @@ class ApplicationController < ActionController::Base
     redirect_to '/sign_up' unless current_user
   end
 
+  def require_veteran
+    redirect_to '/' unless current_user.is_veteran?
+  end
+
+  def require_moderator
+    redirect_to '/' unless current_user.is_moderator?
+  end
+
 end

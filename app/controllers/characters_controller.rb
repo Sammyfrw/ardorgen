@@ -1,4 +1,6 @@
 class CharactersController < ApplicationController
+
+  before_action :require_moderator, only: [:new, :create, :edit, :update, :delete]
   def index
     @characters = Character.order(created_at: :asc)
     @ethercrafts = Ethercraft.pluck(:name)
