@@ -1,6 +1,12 @@
 .header {
   @include outer-container;
+  margin-bottom: 40px;
 }
 
 .site_title {
+  @include span-columns(8);
+}
+
+.user_header{
+  @include span-columns(4);
 }
