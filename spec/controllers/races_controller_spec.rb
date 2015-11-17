@@ -14,20 +14,6 @@ describe RacesController do
     end
   end
 
-  # describe 'GET #show' do
-  #   it "assigns the requested race to @race" do
-  #     race = create(:race)
-  #     get :show, id: race
-  #     expect(assigns(:race)).to eq race
-  #   end
-
-  #   it "renders the :show template" do
-  #     race = create(:race)
-  #     get :show, id: race
-  #     expect(response).to render_template :show
-  #   end
-  # end
-
   describe 'GET #new' do
     it "assigns a new race to @race" do
       get :new

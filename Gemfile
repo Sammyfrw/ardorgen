@@ -29,7 +29,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'faker'
+  gem 'faker', '~> 1.5'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'

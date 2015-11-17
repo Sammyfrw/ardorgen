@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   root to: "dashboards#index"
 
-
   get "sign_up" => "users#new"
   resources :users
 
@@ -18,6 +17,5 @@ Rails.application.routes.draw do
   resources :countries
   resources :regions
   resources :places
-
 
 end

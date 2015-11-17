@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   ROLE = %W(user veteran moderator admin)
   validates :name, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
   validates :role, presence: true
 
   def role_is?(minimum_role)
