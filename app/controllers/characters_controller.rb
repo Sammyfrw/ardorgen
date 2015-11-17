@@ -1,6 +1,12 @@
 class CharactersController < ApplicationController
 
-  before_action :require_moderator, only: [:new, :create, :edit, :update, :delete]
+  before_action only: [:new, :create, :edit, :update, :destroy] do
+    if current_user.role_is?("moderator")
+    else
+      redirect_to '/'
+    end
+  end
+
   def index
     @characters = Character.order(created_at: :asc)
     @ethercrafts = Ethercraft.pluck(:name)

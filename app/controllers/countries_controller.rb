@@ -1,4 +1,12 @@
 class CountriesController < ApplicationController
+
+  before_action only: [:new, :create, :edit, :update, :destroy] do
+    if current_user.role_is?("moderator")
+    else
+      redirect_to '/'
+    end
+  end
+
   def index
     @countries = Country.order(name: :desc)
   end

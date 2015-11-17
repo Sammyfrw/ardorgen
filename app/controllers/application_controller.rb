@@ -9,16 +9,7 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
-  def require_user
+  def required_user
     redirect_to '/sign_up' unless current_user
   end
-
-  def require_veteran
-    redirect_to '/' unless current_user.is_veteran?
-  end
-
-  def require_moderator
-    redirect_to '/' unless current_user.is_moderator?
-  end
-
 end
